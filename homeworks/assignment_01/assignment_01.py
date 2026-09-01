@@ -19,11 +19,11 @@ import operator
 # Problem 01
 
 PROBLEM_01_PATH = Path(__file__).resolve().parent / 'problem_01.txt'
-upper_limit = 2000  # Defined by the assignment
+UPPER_LIMIT = 2000  # Defined by the assignment
 
 # Using the for loop
 
-for_loop_array = range(0,upper_limit+1)
+for_loop_array = range(0,UPPER_LIMIT + 1)
 
 print('*' * 20, 'PROBLEM 01', '*' * 20)
 print('Using the for loop:')
@@ -38,7 +38,7 @@ iteration = 0
 
 print('Using the while loop:')
 with open(PROBLEM_01_PATH, 'a') as f:
-    while (upper_limit + 1) > iteration:
+    while (UPPER_LIMIT + 1) > iteration:
         print(iteration)
         f.write(f'{iteration}\n')
         iteration += 1
