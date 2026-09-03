@@ -53,10 +53,13 @@ PROBLEM_02_PATH = Path(__file__).resolve().parent / 'data.txt'
 # One comparison function rather than two blocks of code with similar logic; uses operator module to evaluate
 def _second_x(f, op):
     first_place = float(f.readline().split()[0])  # Initializes the largest/smallest value as the first line
+    second_place = first_place
     for line in f:
         if op(float(line.split()[0]), first_place):
             second_place = first_place
             first_place = float(line.split()[0])
+        elif op(float(line.split()[0]), second_place):
+            second_place = float(line.split()[0])
     return second_place
 
 with open(PROBLEM_02_PATH, 'r') as f:
