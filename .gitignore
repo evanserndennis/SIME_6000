@@ -44,3 +44,6 @@ build/
 # Misc
 *.bak
 *.tmp
+
+# Lectures
+lectures/
